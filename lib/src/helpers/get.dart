@@ -12,7 +12,7 @@ class Get {
     return t.toString();
   }
 
-  put<T>(dynamic dependency, {String? tag}) {
+  void put<T>(dynamic dependency, {String? tag}) {
     final String key = _getKey(T, tag);
     _data[key] = dependency;
   }
@@ -21,8 +21,13 @@ class Get {
     final String key = _getKey(T, tag);
 
     if (!_data.containsKey(key)) {
-      throw AssertionError("$key not fount, make sure call put firts");
+      throw AssertionError("$key not found, make sure call put first");
     }
     return _data[key];
+  }
+
+  void remove<T>({String? tag}) {
+    final String key = _getKey(T, tag);
+    _data.remove(key);
   }
 }

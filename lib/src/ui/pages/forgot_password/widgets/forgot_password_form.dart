@@ -66,7 +66,6 @@ class ForgotPasswordForm extends StatelessWidget {
                 _submit(context);
               },
               label: 'Send',
-              fullWith: false,
             ),
           )
         ],

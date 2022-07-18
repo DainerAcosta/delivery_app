@@ -1,6 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:delivery_app/src/data/models/user.dart';
+import 'package:delivery_app/src/helpers/get.dart';
 import 'package:delivery_app/src/routes/routes.dart';
 import 'package:delivery_app/src/ui/global_widgets/input_text.dart';
 import 'package:delivery_app/src/ui/global_widgets/rounded_button.dart';
@@ -29,8 +30,8 @@ class LoginForm extends StatelessWidget {
                 content: Text('Invalid email or password'),
               ));
     } else {
-      Navigator.restorablePushNamedAndRemoveUntil(
-          context, Routes.HOME, (_) => false);
+      Get.i.put<User>(user);
+      Navigator.pushNamedAndRemoveUntil(context, Routes.HOME, (_) => false);
     }
   }
 
@@ -83,7 +84,6 @@ class LoginForm extends StatelessWidget {
           RoundedButton(
             onPressed: () => _submit(context),
             label: 'Login',
-            fullWith: false,
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
           ),
         ],

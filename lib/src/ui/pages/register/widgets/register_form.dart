@@ -93,7 +93,6 @@ class RegisterForm extends StatelessWidget {
                   _submit(context);
                 },
                 label: 'Sign Up',
-                fullWith: false,
               ),
             )
           ],

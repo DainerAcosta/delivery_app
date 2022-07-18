@@ -1,5 +1,5 @@
 import 'package:delivery_app/src/data/models/user.dart';
-import 'package:delivery_app/src/data/providers/authentication_provider.dart';
+import 'package:delivery_app/src/data/providers/remote/authentication_provider.dart';
 import 'package:delivery_app/src/data/repositories/authentication_repository.dart';
 
 class AuthenticationRepositoryImpl implements AuthenticationRepository {

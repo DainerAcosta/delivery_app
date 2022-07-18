@@ -39,6 +39,7 @@ dependencies:
   cached_network_image: ^3.2.1
   flutter_svg: ^1.1.1+1
   dots_indicator: ^2.1.0
+  flutter_slidable: ^0.6.0-nullsafety.0
   
 
 dev_dependencies:
@@ -81,6 +82,12 @@ flutter:
     - assets/pages/home/search.svg
     - assets/pages/home/settings.svg
     - assets/pages/home/star.svg
+    - assets/pages/home/home_tab/breakfast.svg
+    - assets/pages/home/home_tab/dessert.svg
+    - assets/pages/home/home_tab/dinner.svg
+    - assets/pages/home/home_tab/fries.svg
+    # JSONS
+    - assets/pages/home/home_tab/json/popular_menu.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
